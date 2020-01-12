@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: demo
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      hibernate.naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  http:
+    multipart:
+      enabled: true
+      max-file-size: 50MB
+      max-request-size: 50MB
+    encoding:
+      force: true
+      enabled: true
+      charset: UTF-8
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false
+    driverClassName: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    username: test
+    password: test
